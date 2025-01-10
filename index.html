@@ -42,12 +42,12 @@
 <body>
     <div class="container">
         <h1>Google Form with Timer</h1>
-        <p>Please complete this form within the allocated time of 2 hours and 15 minutes. The form will be automatically submitted when the timer ends.</p>
+        <p>Please complete this form within the allocated time of 2 hours. The form will be automatically submitted when the timer ends.</p>
         
-        <div class="timer" id="timer">2:15:00</div>
+        <div class="timer" id="timer">2:00:00</div>
 
         <!-- Embed your Google Form URL here -->
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdXQW7pK2etM2V8LNEZLzMokj-33ckKx-4Az4_BAeQFpLPr3Q/viewform?usp=sf_link id="googleForm"></iframe>
+        <iframe src="https://docs.google.com/forms/d/e/1FF9jtKz06Gcl8nZr0yShZMdNUaDys9dEvFlrsqUl2QI/viewform" id="googleForm"></iframe>
     </div>
 
     <script>
@@ -55,8 +55,8 @@
         const timerElement = document.getElementById("timer");
         const googleForm = document.getElementById("googleForm");
 
-        // Retrieve stored timeLeft from localStorage or initialize to 2 hours 15 minutes
-        let timeLeft = localStorage.getItem("timeLeft") ? parseInt(localStorage.getItem("timeLeft")) : 2 * 60 * 60 ;
+        // Retrieve stored timeLeft from localStorage or initialize to 2 hours
+        let timeLeft = localStorage.getItem("timeLeft") ? parseInt(localStorage.getItem("timeLeft")) : 2 * 60 * 60;
 
         function updateTimerDisplay() {
             const hours = Math.floor(timeLeft / 3600);
